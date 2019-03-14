@@ -1,0 +1,57 @@
+{
+  "calendar": "Calendrier",
+  "reminder_custom": "Personnaliser...",
+  "reminder_custom_title": "Rappel personnalisé",
+  "event_title": "Evénement",
+  "edit_event": "Modifier événement",
+  "event_starting": "L'événement commence %1: %2",
+  "now": "maintenant",
+  "go_to_post": "Aller sur la publication",
+
+  "event_name": "Nom de l'événement",
+  "all_day": "Toute la journée",
+  "dates": "Dates",
+  "start_date": "Heure/Date de début",
+  "end_date": "Heure/Date de fin",
+  "when": "Quand",
+  "starts": "Commence",
+  "ends": "Fini",
+  "description": "Description",
+  "description_ext": "Informations sur les autres événements",
+  "location": "Lieu",
+  "location_ext": "Lieu de l'événement",
+  "reminders": "Rappel",
+  "add_reminder": "Ajouter un rappel",
+  "mandatory": "Obligatoir",
+
+  "repetition_custom": "Personnaliser...",
+  "repeat_weekly": "Hebdomadaire",
+  "repeat_forever": "Toujours",
+  "repeat_until_date": "Jusqu'à",
+  "repetition": "Périodicité",
+  "no_repeat": "Non périodique",
+  "every_day": "Quotidien",
+  "every_week": "Hebdomadaire",
+  "every_month": "Mensuel",
+  "every_year": "Annuel",
+  "repeats_weekly_on_until": "Répéter toutes les semaines jusqu'au %1 tous les",
+  "repeats_weekly_on_forever": "Répéter sans date de fin le",
+
+  "today": "Aujourd'hui",
+  "only_yes": "Mon Planning",
+  "only_yes_long": "Ne montrer que les événements où vous avez confirmé votre présence",
+
+  "event_starting_soon": "L'événement suivant commence bientôt",
+
+  "responses_title": "Participants",
+  "response_no": "Non",
+  "response_maybe": "Peut-être",
+  "response_yes": "Oui",
+  "no_x_responses": "Pas encore de réponses <b>%1</b>",
+
+  "confirm_delete_event": "Êtes-vous sûr de vouloir supprimer l'événement attaché à cette publication? Cette action ne peut être annulée.",
+
+  "name_too_short": "Le titre de l'évenement doit faire plus de cinq caractères",
+  "invalid_date": "Les dates sélectionnées ne sont pas valides",
+  "invalid_location": "Le lieu peut doit tenir sur une ligne"
+}

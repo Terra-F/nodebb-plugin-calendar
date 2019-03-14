@@ -1,0 +1,306 @@
+@import (inline) '../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css';
+
+.plugin-calendar-event {
+  i.fa {
+    margin: 10px;
+    margin-left: 0;
+    margin-top: 5px;
+    vertical-align: top;
+  }
+  .form-group i.fa {
+    vertical-align: middle;
+  }
+  .input-group-addon i.fa {
+    margin: 0;
+    vertical-align: middle;
+  }
+  .plugin-calendar-event-date > a,
+  .plugin-calendar-event-location > span,
+  .plugin-calendar-event-description > span,
+  .plugin-calendar-event-reminders > ul {
+    display: inline-block;
+  }
+  .panel-body > div {
+    clear: both;
+    margin-bottom: 5px;
+  }
+  .plugin-calendar-event-reminders > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 10px;
+
+    li {
+      list-style-type: none!important;
+      margin-left: 0;
+    }
+  }
+
+  .plugin-calendar-event-description,
+  .plugin-calendar-event-responses,
+  .plugin-calendar-event-reminders {
+    position: relative;
+
+    > i.fa {
+      position: absolute;
+    }
+    > div, > ul {
+      margin-left: 25px;
+      display: inline-block;
+    }
+  }
+
+  .plugin-calendar-event-responses {
+    > div {
+      padding: 0;
+      padding-right: 25px;
+      float: none;
+    }
+
+    .plugin-calendar-event-responses-user, .plugin-calendar-event-responses-day {
+      margin-bottom: 10px;
+    }
+
+    .plugin-calendar-event-responses-lists {
+      .panel {
+        .panel-heading .fa-chevron-down {
+          margin: 0;
+          margin-top: 3px;
+          transition: transform .2s ease;
+          transform: rotateX(180deg);
+        }
+        .panel-collapse {
+          overflow: hidden;
+          transition: height .2s ease;
+        }
+      }
+      .panel.closed {
+        .panel-heading .fa-chevron-down {
+          transform: rotateX(0);
+        }
+        .panel-collapse {
+          height: 0 !important;
+        }
+      }
+
+      .panel-heading a {
+        margin: -11px -16px;
+        margin-bottom: -10px;
+        display: block;
+      }
+
+      .panel .panel-body > ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 -5px;
+
+        .user-icon {
+          margin: 0;
+        }
+
+        > li {
+          list-style-type: none;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+#plugin-calendar-event-editor {
+  z-index: 10001;
+
+  .plugin-calendar-event {
+    margin: -15px;
+  }
+
+  .plugin-calendar-event-name {
+    .form-group, .error-message {
+      margin: 0;
+    }
+  }
+
+  #plugin-calendar-event-editor-name {
+    font-size: 135%;
+  }
+
+  .form-group .error-message {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s ease;
+  }
+
+  .form-group.has-error .error-message {
+    max-height: 1.5em;
+  }
+
+  .plugin-calendar-event-reminders > ul,
+  .plugin-calendar-event-repetition > ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .plugin-calendar-event-editor-dates {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    @media (max-width: @screen-xs-max) {
+      flex-direction: column;
+    }
+
+    .input-group-addon i.fa {
+      width: 12px;
+    }
+  }
+
+  .plugin-calendar-event-editor-reminder,
+  #plugin-calendar-event-editor-reminders-add,
+  .plugin-calendar-event-editor-repetition,
+  #plugin-calendar-event-editor-repetition-change {
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+  }
+
+  .checkbox {
+    margin-top: 0;
+
+    label {
+      font-weight: bold;
+      padding: 0;
+
+      input[type=checkbox] {
+        margin-right: 11px;
+        margin-top: 2px;
+        float: left;
+        margin-left: 0;
+        position: static;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  .plugin-calendar-event-editor-reminder {
+    > a.remove {
+      float: right;
+
+      i.fa-times {
+        margin: 0;
+      }
+    }
+  }
+
+  textarea {
+    margin: 0;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  #plugin-calendar-event-editor-reminder-custom {
+    margin: 0;
+    text-align: center;
+
+    > .form-group {
+      text-align: left;
+    }
+    #plugin-calendar-event-editor-reminder-custom-unit {
+      // margin-left: 30px;
+
+      .btn-group {
+        display: flex;
+
+        .btn {
+          flex-grow: 1;
+        }
+      }
+    }
+    .btn .fa {
+      margin: 0;
+    }
+  }
+
+  #plugin-calendar-event-editor-repetition-change > ul {
+    width: 220px;
+  }
+
+  #plugin-calendar-event-editor-repetition-change > .dropdown-menu > li > .radio {
+    &:extend(.dropdown-menu>li>a);
+    &:hover, &:focus {
+      &:extend(.dropdown-menu>li>a:hover);
+    }
+    margin: 0;
+
+    label {
+      display: block;
+      padding: 0;
+    }
+
+    i.fa {
+      visibility: hidden;
+      margin: 0;
+      float: right;
+      margin-left: 15px;
+      margin-top: 2px;
+    }
+
+    input:checked ~ i.fa {
+      visibility: visible;
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  #plugin-calendar-event-editor-repetition-custom {
+    margin: 0;
+
+    .btn .fa {
+      margin: 0;
+    }
+  }
+
+  #plugin-calendar-event-editor-repetition-custom-daysOfWeek {
+    ul {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    li {
+      display: inline-block;
+      margin: 2.5px;
+
+      a {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 20px;
+        border: 1px solid #2e6da4;
+
+        &:active, &.active {
+          background: #337ab7;
+          border-color: #204d74;
+          color: white;
+        }
+      }
+    }
+  }
+
+  #plugin-calendar-event-editor-repetition-endDate .bootstrap-datetimepicker-widget {
+    top: 124px !important;
+    bottom: auto !important;
+    margin-left: 170px;
+  }
+}
+
+.composer .preview .plugin-calendar-event .plugin-calendar-event-responses {
+  display: none;
+}

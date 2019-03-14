@@ -1,0 +1,25 @@
+{
+    "globals": {
+        "$": true,
+        "jQuery": true,
+        "app": true,
+        "socket": true,
+        "config": true,
+        "RELATIVE_PATH": true,
+        "ajaxify": true,
+        "bootbox": true
+    },
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "import/no-unresolved": ["error", {
+            "ignore": [
+                "composer",
+                "composer/formatting",
+                "translator",
+                "benchpress"
+            ]
+        }]
+    }
+}

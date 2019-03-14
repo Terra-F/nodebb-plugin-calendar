@@ -878,3 +878,4 @@
   };
 
 })(module.exports, module);
+module.exports = require('./build/lib');
